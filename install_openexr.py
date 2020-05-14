@@ -54,18 +54,6 @@ def copy_dir(src_dir, dst_dir):
 
 # Entry point
 if __name__ == '__main__':
-    for key,value in os.environ.items():
-        if key.startswith('REZ_BUILD_'):
-            print("{} = {}".format(key, value))
-
-    for key,value in os.environ.items():
-        if key.find('__PARSE_ARG_') >= 0:
-            print("{} = {}".format(key, value))
-
-    for key,value in os.environ.items():
-        if value.find('Ninja') >= 0:
-            print("{} = {}".format(key, value))
-
     # Configure IlmBase CMake.
     IlmBase_build_path = os.path.join(os.environ.get('REZ_BUILD_PATH'), 'IlmBase')
     create_dir(IlmBase_build_path)
