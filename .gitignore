@@ -21,3 +21,4 @@ missing
 .DS_Store
 *.project
 *.cproject
+build/
